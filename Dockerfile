@@ -1,5 +1,5 @@
 # Pull base image 
-From ubuntu 
+From tomcat:8-jre8 
 
 # Maintainer 
 MAINTAINER "tanvigirme1@gmail.com" 
