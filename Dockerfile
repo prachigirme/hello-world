@@ -3,8 +3,7 @@ From tomcat:8-jre8
 
 # Maintainer 
 MAINTAINER "tanvigirme1@gmail.com" 
-RUN webapp/target/*.war
-RUN webapp/target
+
 RUN //opt//docker
     
 CMD docker stop valaxy_demo;
