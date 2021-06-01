@@ -4,7 +4,6 @@ From tomcat:8-jre8
 # Maintainer 
 MAINTAINER "tanvigirme1@gmail.com" 
 
-RUN //opt//docker
     
 CMD docker stop valaxy_demo;
 CMD   docker rm -f valaxy_demo;
