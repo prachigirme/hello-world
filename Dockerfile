@@ -1,14 +1,9 @@
-# Pull base image 
-From tomcat:8-jre8 
+FROM tomcat:latest
 
-# Maintainer 
-MAINTAINER "tanvigirme1@gmail.com" 
+LABEL maintainer="Prachiii"
 
-    
-CMD docker stop valaxy_demo;
-CMD   docker rm -f valaxy_demo;
-CMD  docker image rm -f valaxy_demo;
-CMD  cd /opt/docker;
-CMD docker build -t valaxy_demo .
-COPY ./webapp.war /usr/local/tomcat/webapps
-CMD docker run -d --name valaxy_demo -p 8090:8080 valaxy_demo
+ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
